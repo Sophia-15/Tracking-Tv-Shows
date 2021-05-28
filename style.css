@@ -1,0 +1,374 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /*a cada um 1rem sera considerado 10px*/
+    font-size: 62.5%;
+}
+
+h1 {
+    color: #BB6BD9;
+    font-weight: 600;
+    font-size: 5rem;
+    opacity: 0.8;
+    margin-bottom: 3rem;
+}
+
+
+
+h2, p{
+    color: white;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.user p {
+    color: white;
+}
+
+
+
+.card-info h2, p {
+    color: #481658;
+}
+
+
+h3 {
+    color: #BB6BD9;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+
+main {
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background: #1B2029;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.glass {
+    background: white;
+    min-height: 80vh;
+    width: 100%;
+    max-width: 1491.19px;
+    /*background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255,255,255, 0.3));*/
+    background: rgb(27, 32, 41);
+    border-radius: 2rem;
+    z-index: 2;
+    backdrop-filter: blur(2rem);
+    display: flex;
+    box-shadow: 0px 0px 100px #481658;
+}
+
+
+.dashboard {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    /*background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255,255,255, 0.3));*/
+    background: rgb(27, 32, 41);
+    border-radius: 2rem;
+}
+
+.link {
+    display: flex;
+    margin: 2rem 0rem;
+    padding: 3rem 7rem;
+    align-items: center;
+    cursor: pointer;
+    
+}
+
+.link h2 {
+    padding: 0rem 2rem;
+}
+
+.games {
+    flex: 2;
+}
+
+.pro {
+    background: linear-gradient(to right top, #481658, #72418c);
+    border-radius: 2rem;
+    color: white;
+    padding: 3rem;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 8rem;
+}
+
+.pro img {
+    position: absolute;
+    bottom: 15%; 
+    right: 10%;
+}
+
+.pro h2{
+    font-size: 2rem;
+    width: 100%;
+    max-width: 40%;
+    color: white;
+    font-weight: 600;
+}
+ 
+/*Game section*/
+
+.status {
+    margin-bottom: 3rem;
+}
+
+.status input {
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255,255,255, 0.3));
+    border: none;
+    max-width: 100%;
+    width: 60%;
+    padding: 1.5rem;
+    border-radius: 2rem;
+}
+
+.status input::-webkit-input-placeholder{
+    font-family: 'Poppins', sans-serif;
+    color : black;
+    font-size: 1.9rem;
+    font-weight: 300;
+    background: local;
+}
+
+.games {
+    margin: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+.card{
+    display: flex;
+    background: linear-gradient(to left top, rgba(255, 255, 255, 0.8), rgba(255,255,255, 0.5));
+    border-radius: 2rem;
+    margin: 4rem 0rem;
+    padding: 2rem;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.2);
+    justify-content: space-between;
+}
+
+.progress {
+    background: linear-gradient(to right top, #481658, #72418c);
+    max-width:100%;
+    width: 320px;
+    height: 25%;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.8);
+}
+
+/*adicionando uma barra para que não pareça que está completo*/
+
+.progress::after{
+    content: '';
+    max-width: 100%;
+    width: 320px;
+    height: 100%;
+    background: rgb(236, 246, 236);
+    position: absolute;
+    left: 60%;
+}
+
+
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.percentage{
+    font-weight: bold;
+    color: #481658;
+    
+}
+
+/* media queries */
+
+@media (max-width: 2627px){
+    .user img {
+        margin-top: 5rem;
+    }
+
+    .link img {
+        height: 5rem;
+    }
+
+    .pro {
+        margin-bottom: 9.4rem;
+    }
+}
+
+@media (max-width:1488px){
+    html{
+        font-size: 40%;
+       }
+
+    .link img {
+        height: 6rem;
+    }
+
+    .pro img {
+        height: 10.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .pro {
+        margin-left: 5rem;
+        margin-bottom: 11.5rem;
+        padding: 3.5rem;
+    }
+
+    .glass {
+        min-height: 40vh;
+        width: 100%;
+        max-width: 1200px;
+    }
+
+    .card img {
+        height: 15rem;
+    }
+    
+    .progress {
+        max-width: 300px;
+    }
+
+    .card {
+        margin: 10rem 0rem;
+        padding: 2rem;
+    }
+
+    
+
+    .status input{
+        width: 320px;
+        
+    }
+}
+
+
+@media (max-width:1260px){
+    html{
+        font-size: 35%;
+       }
+
+    .link img {
+        height: 7rem;
+    }
+
+    .user img {
+        margin-top: 6rem;
+        height: 10rem;
+    }
+
+    .pro img {
+        height: 8.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .pro {
+        margin-left: 2.5rem;
+        margin-bottom: 12.5rem;
+    }
+
+    .glass {
+        min-height: 50vh;
+        width: 100%;
+        max-width: 1000px;
+    }
+
+    .card img {
+        height: 12rem;
+    }
+    
+    .card-info {
+        margin-left: 4rem;
+    }
+
+    .card {
+        margin: 10rem 0rem;
+        padding: 4rem;
+    }
+
+    .status input{
+        width: 320px;
+        
+    }
+
+
+    .progress {
+        max-width: 220px; 
+    }
+
+    .link h2 {
+        margin-top: 2rem;
+    }
+    
+}
+    
+
+@media (max-width:1030px){
+    html{
+        font-size: 30%;
+       }
+
+    .link img {
+        height: 5rem;
+    }
+    
+    .pro img {
+        height: 9.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .pro {
+        margin-left: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .glass {
+        width: 100%;
+        max-width: 300px;
+        flex-direction: column;
+    }
+
+    .card img {
+        height: 10rem;
+    }
+    
+    .card-info {
+        margin-left: 4rem;
+    }
+
+    .status input{
+        width: 220px;
+        
+    }
+
+    .progress {
+        max-width: 110px;
+    }
+
+
+    .games, dashboard {
+        align-items: center;
+    }
+    
+}
